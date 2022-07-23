@@ -39,10 +39,3 @@ print(10, firstIndexBS(l, 10))
 print(20, firstIndexBS(l, 20))
 print(50, firstIndexBS(l, 50))
 
-
-
-l = [10,10,20,20,20,30,30,30,30]
-
-print(20,firstIndex(l,20))
-print(30,firstIndex(l, 30))
-print(10,firstIndex(l, 10))
