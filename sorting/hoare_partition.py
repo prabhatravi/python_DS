@@ -12,6 +12,6 @@ def hoarePartition(arr,l,h):
         if i>=j:
             return j
         arr[i],arr[j]=arr[j],arr[i]
-arr = [10, 80, 30, 90, 40, 50, 70]
-hoarePartition(arr, 0, 6)
+arr = [5, 3, 8, 4, 2, 7, 1, 10]
+hoarePartition(arr, 0, 7)
 print(*arr)
