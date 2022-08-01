@@ -6,22 +6,22 @@ def radixSort(arr):
         exp *= 10
 
 def countingSort(arr, exp):
-    output = [0]*len(arr)
+    n = len(arr)
+    output = [0]*n
     count = [0]*10
-    for i in range(0, len(arr)):
-        index = (arr[i]//exp) % 10
-        count[index] += 1
-    
+    for i in range(0, n):
+        index = (arr[i]//exp)
+        count[index%10] += 1
+        
     for i in range(1, 10):
-        count[i] += count[i - 1]
-
-    i = len(arr)-1
+        count[i] += count[i-1]
+    i = n-1
     while i>=0:
-        index = (arr[i]//exp)%10
-        output[count[index]-1] = arr[i]
-        count[index] -= 1
-        i -= 1
-    for i in range(0, len(arr)):
+        index = (arr[i]//exp)
+        output[count[index%10]-1] = arr[i]
+        count[index%10] -= 1
+        i -=1
+    for i in range(0, n):
         arr[i] = output[i]
 
 arr = [319, 212, 6, 8, 100, 50]
